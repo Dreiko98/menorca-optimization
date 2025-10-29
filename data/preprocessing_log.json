@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-10-29T09:29:55.479293",
+  "original_rows": 1401,
+  "processed_rows": 1401,
+  "rows_removed": 0,
+  "columns": [
+    "grid_id",
+    "cell_area_km2",
+    "dominant_land_cover_name",
+    "cost_adaptation_atelerix",
+    "cost_adaptation_martes",
+    "cost_adaptation_eliomys",
+    "cost_adaptation_oryctolagus",
+    "cost_corridor",
+    "has_atelerix_algirus",
+    "has_martes_martes",
+    "has_eliomys_quercinus",
+    "has_oryctolagus_cuniculus",
+    "geometry"
+  ],
+  "crs": "EPSG:4326",
+  "geometry_types": [
+    "Polygon",
+    "MultiPolygon"
+  ],
+  "valid_geometries": 1401,
+  "total_geometries": 1401
+}
