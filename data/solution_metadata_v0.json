@@ -1,0 +1,10 @@
+{
+  "session": "Session 2",
+  "model_version": "v0_greedy",
+  "algorithm": "Greedy (maximum efficiency)",
+  "budget": 500.0,
+  "objective_value": 608.8999999999996,
+  "total_cost": 499.79999999999995,
+  "n_adaptations": 407,
+  "timestamp": "2025-10-29T10:31:58.043083"
+}

@@ -1,0 +1,61 @@
+{
+  "session": "Session 2",
+  "model_version": "v0_greedy_baseline",
+  "algorithm": "Greedy Heuristic (maximum efficiency)",
+  "description": "Baseline model using greedy algorithm to select habitat adaptations based on weight/cost efficiency ratio. Serves as reference for subsequent MILP formulations.",
+  "budget": 500.0,
+  "species_weights": {
+    "atelerix": 1.0,
+    "martes": 1.2,
+    "eliomys": 1.5,
+    "oryctolagus": 0.8
+  },
+  "parameters": {
+    "max_cells": 1401,
+    "n_species": 4,
+    "n_possible_adaptations": 5533,
+    "cost_range": [0.0, 1.0],
+    "habitat_current": 71
+  },
+  "results": {
+    "adaptations_selected": 407,
+    "cells_adapted": 400,
+    "budget_utilized": 499.8,
+    "budget_efficiency_percent": 99.96,
+    "objective_value": 608.9,
+    "execution_time_seconds": 0.15,
+    "by_species": {
+      "atelerix": {
+        "current": 24,
+        "adapted": 69,
+        "total": 93,
+        "cost": 34.48
+      },
+      "martes": {
+        "current": 11,
+        "adapted": 94,
+        "total": 105,
+        "cost": 47.94
+      },
+      "eliomys": {
+        "current": 20,
+        "adapted": 217,
+        "total": 237,
+        "cost": 115.01
+      },
+      "oryctolagus": {
+        "current": 16,
+        "adapted": 27,
+        "total": 43,
+        "cost": 13.23
+      }
+    }
+  },
+  "notes": [
+    "The greedy heuristic serves as a baseline for subsequent MILP formulations incorporating connectivity constraints.",
+    "No solver dependency - pure Python implementation ensures reproducibility.",
+    "No spatial connectivity constraints applied - cells selected independently.",
+    "Next phase: v1_connectivity - introduces corridors and spatial adjacency.",
+    "Comparison baseline for Session 3 onwards."
+  ]
+}
