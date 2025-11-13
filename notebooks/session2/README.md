@@ -5,8 +5,9 @@
 Esta sesión desarrolla e implementa un modelo de optimización MILP (Mixed Integer Linear Programming) para resolver el problema de adaptación de hábitats en Menorca con restricciones presupuestarias.
 
 **Estado:** ✅ **COMPLETADA**  
-**Fecha:** 29 de octubre de 2025  
-**Versión del Modelo:** v0_habitat_adaptation (Greedy Algorithm)
+**Fecha:** 13 de noviembre de 2025  
+**Versión del Modelo:** v0_habitat_adaptation_regional  
+**Estrategia:** Optimización Regional (Particionamiento Espacial)
 
 ---
 
@@ -20,7 +21,48 @@ Diseñar y resolver un modelo de optimización que:
 
 ---
 
-## 📊 Resultados Principales
+## �️ Metodología: Optimización Regional
+
+### Problema Original
+
+Resolver el modelo con **todas las celdas simultáneamente** (1,401 × 4 especies = 5,604 variables) causaba:
+- ❌ Kernel crashes en Windows
+- ❌ Tiempos excesivos (>8 minutos sin resolver)
+- ❌ Problemas de memoria en fase de presolve
+
+### Solución: Divide & Conquer (Sugerencia de Pilar)
+
+**Estrategia implementada:**
+
+1. **Particionamiento Espacial**: Divide Menorca en 8 regiones usando K-Means clustering
+2. **Optimización Independiente**: Cada región se resuelve como subproblema (~700 variables)
+3. **Presupuesto Proporcional**: Cada región recibe presupuesto según su tamaño
+4. **Combinación de Soluciones**: Las adaptaciones se agregan al final
+
+### Ventajas
+
+| Aspecto | Monolítico | Regional |
+|---------|-----------|----------|
+| **Variables** | 5,604 | ~700 por región |
+| **Tiempo** | >8 min (crash) | 40-120 seg ✅ |
+| **Memoria** | Alta (crash) | Baja ✅ |
+| **Estabilidad** | Crashea ❌ | Estable ✅ |
+| **Solver** | HiGHS (incompatible) | GLPK ✅ |
+
+### Documentación Completa
+
+📖 **Ver `REGIONAL_OPTIMIZATION_GUIDE.md`** para:
+- Instrucciones detalladas de ejecución
+- Configuración de parámetros
+- Troubleshooting
+- Extensiones futuras
+
+---
+
+## �📊 Resultados Principales
+
+> **Nota**: Los resultados a continuación son de la versión greedy baseline. 
+> Ejecuta el notebook actualizado para obtener resultados con optimización regional.
 
 | Métrica | Valor |
 |---------|-------|

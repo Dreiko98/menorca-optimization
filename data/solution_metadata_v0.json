@@ -1,10 +1,69 @@
 {
   "session": "Session 2",
-  "model_version": "v0_greedy",
-  "algorithm": "Greedy (maximum efficiency)",
+  "model_version": "v0_habitat_adaptation_regional",
+  "optimization_strategy": "spatial_partitioning",
+  "n_regions": 8,
+  "date": "2025-11-13T16:56:30.389678",
   "budget": 500.0,
-  "objective_value": 608.8999999999996,
-  "total_cost": 499.79999999999995,
-  "n_adaptations": 407,
-  "timestamp": "2025-10-29T10:31:58.043083"
+  "objective_value": 274.6725944740492,
+  "total_cost": 499.60999999999996,
+  "n_adaptations": 393,
+  "solution_type": "optimal",
+  "solve_time_seconds": 4.934903860092163,
+  "species_breakdown": {
+    "atelerix": {
+      "n_adaptations": 67,
+      "cost": 70.08999999999999,
+      "natural_habitat": 24
+    },
+    "martes": {
+      "n_adaptations": 94,
+      "cost": 109.58,
+      "natural_habitat": 11
+    },
+    "eliomys": {
+      "n_adaptations": 203,
+      "cost": 294.92999999999995,
+      "natural_habitat": 20
+    },
+    "oryctolagus": {
+      "n_adaptations": 29,
+      "cost": 25.01,
+      "natural_habitat": 16
+    }
+  },
+  "regional_breakdown": {
+    "region_1": {
+      "n_adaptations": 51,
+      "cost": 61.31999999999999
+    },
+    "region_2": {
+      "n_adaptations": 57,
+      "cost": 73.5
+    },
+    "region_3": {
+      "n_adaptations": 41,
+      "cost": 55.66
+    },
+    "region_4": {
+      "n_adaptations": 42,
+      "cost": 50.8
+    },
+    "region_5": {
+      "n_adaptations": 51,
+      "cost": 68.13
+    },
+    "region_6": {
+      "n_adaptations": 60,
+      "cost": 76.00999999999999
+    },
+    "region_7": {
+      "n_adaptations": 43,
+      "cost": 55.669999999999995
+    },
+    "region_8": {
+      "n_adaptations": 48,
+      "cost": 58.52
+    }
+  }
 }
