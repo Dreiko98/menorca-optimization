@@ -25,11 +25,25 @@
      - Próximos pasos
    - **Para quién:** Investigadores, desarrolladores, revisores de paper
 
-### 3. **session2_modeling.ipynb**
-   - **Propósito:** Código fuente ejecutable del modelo
-   - **Contenido:** Celdas con importaciones, datos, modelo, resolución y visualización
+### 3. **session2_modeling_executed.ipynb** ← CÓDIGO PRINCIPAL
+   - **Propósito:** Código fuente ejecutable del modelo v0 (Optimización Regional)
+   - **Contenido:** 
+     - 32 celdas con documentación completa
+     - Importaciones, carga de datos
+     - Definición de funciones del modelo MILP
+     - Parámetros de configuración
+     - Particionamiento espacial (K-Means)
+     - Loop regional de optimización
+     - Análisis y visualización de resultados
+     - Guardado de outputs
+   - **Estrategia:** Divide & Conquer (8 regiones para evitar crashes de memoria)
+   - **Solver:** PuLP con CBC integrado
+   - **Resultados:** 
+     - Objetivo: 608.90
+     - Adaptaciones: 407 celdas
+     - Presupuesto utilizado: 499.80/500.0 (99.96%)
    - **Nota:** Requiere kernel Python con librerías instaladas
-   - **Para quién:** Científicos computacionales, reproducibilidad
+   - **Para quién:** Reproducibilidad, verificación de código, desarrollo futuro
 
 ### 4. **optimization_results.png** 
    - **Propósito:** Visualización de resultados (4 gráficos en 1)
@@ -40,9 +54,6 @@
      4. Tabla resumen
    - **Resolución:** 300 DPI (listo para paper IEEE)
    - **Para quién:** Presentaciones, papers, informes
-
-### 5. **SESSION2_REPORT.md** (antiguo, puede ignorarse)
-   - Versión anterior del reporte
 
 ---
 
